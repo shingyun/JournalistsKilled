@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Journalists Killed</title>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container" id='container'>
+    <h2>Exploring Journalist Deaths</h2>
+    <p class='sub'>1232 journalists were killed worldwide from 1992-2017.<br>
+    Each circle represents one journalist death. Click and hover to explore the stories.</p>
+    <div class='plot' id='plot'>
+       <div class='intro'>
+       </div>
+       <div class='button2 button'>
+            <p>by Countries</p>
+       </div>
+       <div class='button1 button'>
+            <p>by Years</p>
+       </div>
+       <div class='button3 button'>
+            <p>by Causes</p>
+       </div>
+       <div class = 'button4 button'>
+            <p>About</p>
+       </div>
+       <div class="custom-tooltip">
+            <p class ='title'> Journalist </p>
+            <p class='nationality'>Nationality </p>
+            <p class='des'>Descripstion </p>
+       </div>
+       <div class = 'sc_menu'>
+            <ul class = 'sc_menu' id = 'menu'>
+            </ul>
+       </div>
+       <div class = 'event'>
+            <p class ='eventName'></p>
+            <p class = 'eventDes'></p> 
+       </div>
+       <div class = 'about'>
+           <div class = 'aboutContent'>
+              <span class = 'close'>&times;</span>
+              <h5>Project of Exploring Journalists Deaths</h5>
+              <br>
+              <p>This project explores journalists deaths through years, countries and causes, with the connection to historical events. The data set is from Committee to Protect Journalists(CPJ). There were more than 1700 journalists and media workers killed over the world from 1992 to present, this project analyzed 1232 deaths which are motive confirmed.<br><br>Shing-Yun Chiang<br>Special Topic in Information Design | NEU Spring 2017<br>Instructor : Siqi Zhu</p>
+            
+           </div>
+       </div>
+       <div>
+           <p class ='hint'>Click to select a group 
+              <p class ='selectedTerm'><p>
+           </p>
+       </div>
+<!--        <div class = 'note'>
+             <span class = 'closeNote'>&times;</span>
+             <p class ='noteContent'>Click on a group and explore the relation by countries, time and causes</p>
+       </div> -->
+    </div>
+</div>
+
+<script src="d3.js"></script>
+<script src="./modules/canvasTick.js"></script>
+<script src="./modules/button.js"></script>
+<script src="./modules/forceLayout_click.js"></script>
+<script src="scriptMain.js"></script>
+
+</body>
+</html>
