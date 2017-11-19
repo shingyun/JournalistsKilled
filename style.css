@@ -40,14 +40,14 @@ body {
 	float: left;
 	left: 50px;
 	height: 35px;
-	color: #969696;
-	font-size: 16px;
+	color: #666666;
+	font-size: 14px;
 	z-index: 9999;
-	border: rgb(146,20,12) 1px solid;
-	border-radius: 5%;
+	border-top: rgb(146,20,12) 1px solid;
+	border-bottom: rgb(146,20,12) 1px solid;
 	text-align: center;
 	padding-top: 5px;
-	margin: 0px 5px;
+	margin: 0px 3px;
 }
 
 .button:hover{
@@ -63,7 +63,7 @@ body {
 }
 
 .clickedBtn {
-	color:white;
+	color: white;
 	background-color: rgb(146,20,12);
 	opacity: 0.8;
 }
@@ -156,7 +156,7 @@ div.sc_menu {
 	max-width: 1100px;
 	min-width:500px;
 	bottom: 20px;
-	height: 50px;
+	height: 45px;
 	left:65px;
 	vertical-align: middle;
 	opacity: 0;
@@ -183,9 +183,12 @@ ul.sc_menu li {
 }
 
 ul.sc_menu li:hover, .sc_menu .active li{
-	border-top: 3px solid orange;
-    border-bottom: 3px solid orange;
+/*	border-top: 3px solid orange;
+    border-bottom: 3px solid orange;*/
+    background-color: orange;
     cursor: default;
+    color: white;
+    opacity: 0.7;
 }
 
 .about {
