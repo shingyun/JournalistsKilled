@@ -49,6 +49,8 @@ function Button(){
 	            .style('stroke','#969696')
 	            .style('opacity',0.8);
 
+	    console.log(_map.features)
+
 	    //Death type axis
 	    var nestByDeath = d3.nest().key(function(d){return d.deathType}).entries(datum);
 
@@ -89,7 +91,7 @@ function Button(){
 	    var xMap = function(d){
 
 	        if (map.get(d.countryKilled)) {
-	            return path.centroid(map.get(d.countryKilled).geometry)[0]-20;
+	            return path.centroid(map.get(d.countryKilled).geometry)[0]-15;
 	           }
 	            return -100;
 	           }
@@ -97,7 +99,7 @@ function Button(){
 
 	    var yMap = function(d){
 	            if (map.get(d.countryKilled)) {
-	                return path.centroid(map.get(d.countryKilled).geometry)[1]+35;
+	                return path.centroid(map.get(d.countryKilled).geometry)[1]+15;
 	            } else {
 	                return 600  ;
 	            }
@@ -123,32 +125,10 @@ function Button(){
 		 d3.select('.button2').classed('clickedBtn',true);
 		 d3.select('.hint').style('visibility','visible');
 
-		 // var note = d3.select('.note'),
-		 //     noteShow = 'no';
-         
-   //       console.log(noteShow);
-
-
-
 
 	//Year, When
 	    d3.select('.button1')
 	      .on('click.year',function(d){
-
-         //     if(noteShow == 'no'){
-         //     	note.style('display','block');
-         //     }else {
-         //     	note.style('display','none');
-         //     }
-
-	      	 // d3.select('.closeNote')
-	      	 //   .on('click',function(){
-	      	 //   	  noteShow = 'yes';
-	      	 //   	  note.style('display','none');
-
-         //                   console.log(noteShow);
-	      	 //   })
-         // console.log(noteShow);
 
 	         d3.select('.button2').classed('clickedBtn',false); 
 	         d3.select('.button3').classed('clickedBtn',false); 
@@ -223,20 +203,6 @@ function Button(){
 
 	              selectedGroupBtn = 'Where';
 
-
-         //     if(noteShow == 'no'){
-         //     	note.style('display','block');
-         //     }else {
-         //     	note.style('display','none');
-         //     }
-
-	      	 // d3.select('.closeNote')
-	      	 //   .on('click',function(){
-	      	 //   	  note.style('display','none');
-         //          noteShow = 'yes';
-	      	 //   })
-         console.log(noteShow);
-
 	              d3.selectAll('.mapData').style('opacity',1);
 	              d3.selectAll('.yearAxis').style('opacity',0);
 	              d3.selectAll('.deathAxis').style('opacity',0);
@@ -264,20 +230,6 @@ function Button(){
 	              d3.select(this).classed('clickedBtn',true);
 
 	              selectedGroupBtn = 'How';
-
-
-         //     if(noteShow == 'no'){
-         //     	note.style('display','block');
-         //     } else {
-         //     	note.style('display','none');
-         //     }
-
-	      	 // d3.select('.closeNote')
-	      	 //   .on('click',function(){
-	      	 //   	  note.style('display','none');
-         //          noteShow = 'yes';
-	      	 //   })
-         console.log(noteShow);
 
 	              d3.selectAll('.mapData').style('opacity',0);
 	              d3.selectAll('.yearAxis').style('opacity',0);
